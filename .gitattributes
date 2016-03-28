@@ -1,17 +1,6 @@
-# Auto detect text files and perform LF normalization
-* text=auto
-
-# Custom for Visual Studio
-*.cs     diff=csharp
-
-# Standard to msysgit
-*.doc	 diff=astextplain
-*.DOC	 diff=astextplain
-*.docx diff=astextplain
-*.DOCX diff=astextplain
-*.dot  diff=astextplain
-*.DOT  diff=astextplain
-*.pdf  diff=astextplain
-*.PDF	 diff=astextplain
-*.rtf	 diff=astextplain
-*.RTF	 diff=astextplain
+# Normalize line endings to avoid spurious failures in the core test suite on Windows.
+*html text eol=lf
+*css text eol=lf
+tests/staticfiles_tests/apps/test/static/test/*txt text eol=lf
+tests/staticfiles_tests/project/documents/test/*txt text eol=lf
+docs/releases/*.txt merge=union
